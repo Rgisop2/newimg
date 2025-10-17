@@ -1,0 +1,53 @@
+{
+  "name": "TG File links/Sharing Bot",
+  "description": "link sharing bot. you can share you private links",
+  "keywords": [
+    "telegram",
+    "links",
+    "sharing"
+  ],
+  "repository": "https://github.com/Sahil0976/Links-Sharing",
+  "logo": "https://ibb.co/FgPVtzw",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "Your Bot token, Get it from @Botfather",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "An integer of consisting of your owner ID",
+      "value": ""
+    },
+    "APP_ID":{
+      "description": "your app id, take it from my.telegram.org",
+      "value": ""
+    },
+    "DATABASE_URL": {
+      "description": "Paste your mongo db url",
+      "value": "url"
+    },
+    "DATABASE_NAME":{
+      "description": "Enter your DATABASE_NAME ",
+      "value": "linkssharing"
+    },
+    "API_HASH":{
+      "description": "your api hash, take it from my.telegram.org",
+      "value": ""
+    },
+    "ADMINS": {
+      "description": "A space separated list of user_ids of Admins, they can only create links",
+      "value": "",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}

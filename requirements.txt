@@ -1,0 +1,10 @@
+# --- For-Bot-Working --------- #
+git+https://github.com/Sahil0976/pyrogram
+TgCrypto
+pyromod
+motor
+# --- For-Database ------------ #
+pymongo
+dnspython
+# --- For-Web-Response ------- #
+aiohttp
