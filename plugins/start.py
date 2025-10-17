@@ -84,7 +84,7 @@ async def start_command(client: Client, message: Message):
                 creates_join_request=is_request
             )
 
-            button_text = "🛎️ Request to Join" if is_request else "🔗 Join Channel"
+            button_text = "📌 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐍𝐨𝐰 " if is_request else "📌 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 𝐍𝐨𝐰"
             button = InlineKeyboardMarkup([[InlineKeyboardButton(button_text, url=invite.invite_link)]])
 
             # If a photo_link is available, send a photo with a MarkdownV2 caption; else fallback to text
@@ -109,7 +109,7 @@ async def start_command(client: Client, message: Message):
                     )
                 except Exception as e:
                     print(f"[start] send_photo markdown failed: {e}")
-                    fallback_caption = f"Title'- {channel_handle} This link will expire in {expire_seconds} seconds."
+                    fallback_caption = f"Title'- \n {channel_handle} \n • Audio: Hindi \n • Quality: 480p+720p+1080p \n \n This link will expire in Few Min."
                     await message.reply_photo(
                         photo=photo_link,
                         caption=fallback_caption,
@@ -135,7 +135,7 @@ async def start_command(client: Client, message: Message):
             except Exception: pass
         inline_buttons = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("About Me", callback_data="help"),
+                [InlineKeyboardButton("Channel", callback_data="help"),
                  InlineKeyboardButton("Close", callback_data="close")]
             ]
         )
@@ -224,7 +224,7 @@ async def help_callback(client: Client, callback_query):
     
     
     await callback_query.answer()
-    await callback_query.message.edit_text("<b><i>About Us..\n\n‣ Made for : @Anime_X_Hunters\n‣ Owned by : @Okabe_xRintarou\n‣ Developer : @The_Seishiro_Nagi\n\n Adios !!</i></b>", reply_markup=inline_buttons)
+    await callback_query.message.edit_text("<b><i> ios !!</i></b>", reply_markup=inline_buttons)
 
 @Client.on_callback_query(filters.regex("close"))
 async def close_callback(client: Client, callback_query):
