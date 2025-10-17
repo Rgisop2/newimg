@@ -4,24 +4,23 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #Recommended
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "0")
-APP_ID = int(os.environ.get("APP_ID", "0"))
-API_HASH = os.environ.get("API_HASH", "0")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "8135643079:AAFDUvQWtxArDHXfs-u-0CIrTMA9nHpL3JA")
+APP_ID = int(os.environ.get("APP_ID", "26457673"))
+API_HASH = os.environ.get("API_HASH", "bb4a4d48ea0b0e7194119b9facd96ab6")
 
-##---------------------------------------------------------------------------------------------------
+##----------------------------------------------------------------------------------->
 
 #Main 
-OWNER_ID = int(os.environ.get("OWNER_ID", "5090651635"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "1327021082"))
 PORT = os.environ.get("PORT", "8010")
 
-##---------------------------------------------------------------------------------------------------
+##----------------------------------------------------------------------------------->
 
 #Database
-DB_URI = os.environ.get("DATABASE_URL", "0")
-DB_NAME = os.environ.get("DATABASE_NAME", "links-sharing")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://ruhan:ruhan@isrg.bzrvwbh.mongodb.net/?retryWrites=true&w=majority&appName=isrg")
+DB_NAME = os.environ.get("DATABASE_NAME", "postbot")
 
-##---------------------------------------------------------------------------------------------------
-
+##----------------------------------------------------------------------------------->
 #Default
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "") #No Need keep it blank
